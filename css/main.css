@@ -1,0 +1,58 @@
+/*
+    http://vis.adjectivespecies.com - visualizations of the furry fandom.
+    Copyright (C) 2012  Madison Scott-Clary
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+body {
+    margin: 0;
+    margin-top: 40px;
+    font-family: serif;
+}
+
+header {
+    width: 100%;
+    background: url(http://assets.adjectivespecies.com/as-stripes.png);
+    text-align: center;
+}
+
+header img {
+    margin: auto;
+}
+
+article, footer {
+    width: 960px;
+    margin: auto;
+}
+
+footer {
+    margin-top: 2em;
+}
+
+section {
+    margin: 0;
+    padding: 1em;
+    min-height: 2em;
+    position: relative;
+}
+
+section img {
+    max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0.5em;
+    font-family: sans-serif;
+}

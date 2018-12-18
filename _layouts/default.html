@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>{{ page.title }} | [adjective][species]</title>
+        <link rel="stylesheet" type="text/css" href="http://assets.adjectivespecies.com/bootstrap/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="/css/main.css" />
+        <link rel="icon" type="image/png" href="http://assets.adjectivespecies.com/favicon.png" />
+        {% if page.additionalHeader %}{{ page.additionalHeader }}{% endif %}
+    </head>
+    <body>
+        <div class="topbar">
+            <div class="topbar-inner">
+                <div class="container-fluid">
+                    <a class="brand" href="http://adjectivespecies.com">[adjective][species]</a>
+                    <ul class="nav">
+                        <li><a href="http://survey.adjectivespecies.com">Surveys</a></li>
+                        <li class="active"><a href="http://vis.adjectivespecies.com">Visualizations</a></li>
+                        <li><a href="http://twitter.com/adjspecies">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <header>
+            <a href="http://adjectivespecies.com"><img src="http://assets.adjectivespecies.com/as-header.png" /></a>
+        </header>
+        <div style="float:right;position:relative;text-align:right;margin-top:0;">
+        <a href="https://github.com/adjspecies/vis.adjectivespecies.com"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+        </div>
+        <article>
+            <h1>{{page.title}}</h1>
+            <section>
+                {{ content }}
+            </section>
+        </article>
+        <footer>
+            Content <a href="http://lib.jnsq.us/license/cc-by-nc-sa" target="_blank"><img src="http://lib.jnsq.us/licenses/small/by-nc-sa_inline.png" alt="CC BY-NC-SA (Attribution-NonCommercial-ShareAlike)" /> [adjective][species], 2011 - 2013</a> under the CC BY-NC-SA (Attribution-NonCommercial-ShareAlike) license<br />
+        </footer>
+    </body>
+</html>
