@@ -1,2 +1,4 @@
 title: \[adjective\]\[species\] presentations
 description: Panels and presentations.
+exclude:
+    - lib/node_modules
