@@ -27,8 +27,8 @@ a {
 
 a:hover,
 a:focus {
-    background: rgba(255,255,255,1);
-    text-shadow: -1px -1px 2px rgba(100,100,100,0.5);
+    background: rgba(255,255,255,0.4);
+    text-shadow: -1px -1px 2px rgba(25,25,25,0.5);
 }
 
 /*** Fallback message for when Impress isn't supported. ***/
@@ -74,7 +74,7 @@ a:focus {
 
 .impress-enabled .step {
     margin: 0;
-    opacity: 0.3;
+    opacity: 0.1;
 
     transition: opacity 1s;
 }
@@ -124,10 +124,10 @@ a:focus {
     overflow-y: scroll;
 }
 
-.vis.prev {
+.vis-slide.prev {
     transform: color 330ms, background-color 330ms, height 330ms, width: 330ms;
 }
-.vis.active {
+.vis-slide.active {
     display: block;
 
     border: none;
@@ -139,9 +139,16 @@ a:focus {
     width: 100vw;
     transform: color 330ms, background-color 330ms, height 330ms, width: 330ms;
 }
+.vis-slide.e621-slide.active {
+    color: white;
+    background-color: rgb(40, 73, 128);
+}
 
 #overview { display: none }
 
+.impress-on-overview #rotate-controls {
+    display: block;
+}
 .impress-on-overview .step {
     opacity: 1;
     cursor: pointer;
@@ -149,6 +156,32 @@ a:focus {
 .impress-on-overview {
     background-color: rgb(215, 215, 215);
     transition: background-color 330ms;
+}
+
+/*** Rotate controlls ***/
+
+#rotate-controls {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 200px;
+    height: 220px;
+    z-index: 10000;
+    pointer-events: auto;
+    opacity: .5;
+}
+
+#rotate-controls .rotateZ, #rotate-controls .rotateX {
+    width: 200px;
+    height: 20px;
+}
+
+#rotate-controls .rotateY {
+    width: 200px;
+    height: 200px;
+    transform-origin: 100px 100px;
+    transform: rotate(-90deg)
 }
 
 /*** Impress toolbar ***/
@@ -194,7 +227,7 @@ body.impress-mouse-timeout {
     bottom: 1px;
     text-align: left;
     opacity: 0.6;
-}
+;}
 
 
 /*** Impress console ***/
