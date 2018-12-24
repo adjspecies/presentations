@@ -58,7 +58,7 @@
                 data-y="-2500"
                 data-z="-5000"
                 data-rotate-z="90"
-                data-transition-duration="750">
+                data-transition-duration="0">
             <p>(It's complicated)</p>
             <div class="notes">NOTES NOTES NOTES</div>
         </div>
@@ -72,6 +72,17 @@
             <h3>How we perceive ourselves</h3>
             <div class="notes">NOTES NOTES NOTES</div>
         </div>
+        <div id="seximportance-self"
+                class="step slide vis-slide"
+                data-rel-x="1000"
+                data-func-enter="presentation.enter"
+                data-func-leave="presentation.leave"
+                data-vis-src="vis/furrysurvey/seximportance/vis.js"
+                data-vis-func-enter="presentation.seximportance.self"
+                data-vis-func-leave="presentation.seximportance._leave"
+                data-vis-id="seximportance__self">
+            <div class="vis-container"></div>
+        </div>
         <div id="intro-3"
                 class="step slide"
                 data-rel-x="1000"
@@ -79,11 +90,34 @@
             <h3>How we perceive other furries</h3>
             <div class="notes">NOTES NOTES NOTES</div>
         </div>
+        <div id="seximportance-others"
+                class="step slide vis-slide"
+                data-rel-x="1000"
+                data-func-enter="presentation.enter"
+                data-func-leave="presentation.leave"
+                data-vis-src="vis/furrysurvey/seximportance/vis.js"
+                data-vis-func-enter="presentation.seximportance.others"
+                data-vis-func-leave="presentation.seximportance._leave"
+                data-vis-id="seximportance__others">
+            <div class="vis-container"></div>
+        </div>
         <div id="intro-4"
                 class="step slide"
-                data-x="3000">
+                data-rel-x="1000">
             <h3>How we feel the public perceives us</h3>
             <div class="notes">NOTES NOTES NOTES</div>
+        </div>
+        <div id="seximportance-public"
+                class="step slide vis-slide"
+                data-rel-x="1000"
+                data-z="0"
+                data-func-enter="presentation.enter"
+                data-func-leave="presentation.leave"
+                data-vis-src="vis/furrysurvey/seximportance/vis.js"
+                data-vis-func-enter="presentation.seximportance.public"
+                data-vis-func-leave="presentation.seximportance._leave"
+                data-vis-id="seximportance__public">
+            <div class="vis-container"></div>
         </div>
 
         <div id="data-1"
@@ -364,8 +398,14 @@
                 class="step slide vis-slide"
                 data-rel-y="-1000"
                 data-rotate-x="-90"
-                data-rotate-y="90">
-            <h3>VIS GOES HERE</h3>
+                data-rotate-y="90"
+                data-func-enter="presentation.enter"
+                data-func-leave="presentation.leave"
+                data-vis-src="vis/furrysurvey/interests/vis.js"
+                data-vis-func-enter="presentation.interests.domsub"
+                data-vis-func-leave="presentation.interests._leave"
+                data-vis-id="interests__domsub">
+            <div class="vis-container"></div>
             <div class="notes">NOTES NOTES NOTES</div>
         </div>
         <div id="furry-survey-4"
@@ -455,8 +495,14 @@
                 class="step slide vis-slide"
                 data-rel-y="-1000"
                 data-rotate-x="-90"
-                data-rotate-y="90">
-            <h3>VIS GOES HERE</h3>
+                data-rotate-y="90"
+                data-func-enter="presentation.enter"
+                data-func-leave="presentation.leave"
+                data-vis-src="vis/furrysurvey/interests/vis.js"
+                data-vis-func-enter="presentation.interests.kinks"
+                data-vis-func-leave="presentation.interests._leave"
+                data-vis-id="interests__kinks">
+            <div class="vis-container"></div>
             <div class="notes">NOTES NOTES NOTES</div>
         </div>
 
@@ -473,6 +519,8 @@
                 <ul>
                     <li>SoFurry, née YiffStar</li>
                     <li><em>next</em> Furry writing and art site, mostly known for writing</li>
+                    <li>advantage over surveys is that there's less performativity: answering to meet expectations or to shock.</li>
+                    <li>advantage over wixxx is thatthere's something concrete at stake rather than just "oh I like anal".</li>
                 </ul>
             </div>
         </div>
@@ -504,10 +552,18 @@
             </div>
         </div>
         <div id="sofurry-n"
-                class="step slide"
+                class="step slide vis-slide"
                 data-rel-x="-1000"
                 data-rotate-x="-90"
-                data-rotate-y="180">
+                data-rotate-y="180"
+                data-func-enter="presentation.enter"
+                data-func-leave="presentation.leave"
+                data-vis-src="vis/sofurry/vis.js"
+                data-vis-func-enter="presentation.sofurry.stub_enter"
+                data-vis-func-leave="presentation.sofurry._leave"
+                data-vis-id="sofurry__stub">
+            <div class="vis-container"></div>
+            <div class="notes">NOTES NOTES NOTES</div>
         </div>
 
 
@@ -533,8 +589,15 @@
                 class="step slide vis-slide e621-slide"
                 data-rel-y="1000"
                 data-rotate-x="-90"
-                data-rotate-y="270">
-            <h3>e621</h3>
+                data-rotate-y="270"
+                data-func-enter="presentation.enter"
+                data-func-leave="presentation.leave"
+                data-vis-src="vis/e621/vis.js"
+                data-vis-func-enter="presentation.e621.stub_enter"
+                data-vis-func-leave="presentation.e621._leave"
+                data-vis-id="e621__stub">
+            <div class="vis-container"></div>
+            <div class="notes">NOTES NOTES NOTES</div>
         </div>
         <div id="e721-n"
                 class="step slide"
@@ -569,9 +632,9 @@
 
         <div id="overview"
                 class="step"
-                data-x="9000"
-                data-y="4000"
-                data-z="11000">
+                data-x="7000"
+                data-y="3000"
+                data-z="8000">
         </div>
     </div>
     <div id="rotate-controls">
@@ -586,32 +649,9 @@
         <p>Use a spacebar or arrow keys to navigate. <br/>
            Press 'P' to launch speaker console.</p>
     </div>
-    <script>
-    if ("ontouchstart" in document.documentElement) {
-        document.querySelector(".hint").innerHTML = "<p>Swipe left or right to navigate</p>";
-    }
-    </script>
+    <script src="/lib/d3/d3.min.js"></script>
     <script src="/lib/impress/impress.js"></script>
-    <script>
-    const overview = document.getElementById('overview');
-    const presentation = impress();
-    presentation.init();
-    const rotateControls = document.getElementById('rotate-controls');
-    const rotateX = rotateControls.getElementsByClassName('rotateX')[0];
-    const rotateY = rotateControls.getElementsByClassName('rotateY')[0];
-    const rotateZ = rotateControls.getElementsByClassName('rotateZ')[0];
-    rotateX.addEventListener('input', evt => {
-        overview.dataset.rotateX = evt.target.value;
-        presentation.goto(overview, 0);
-    });
-    rotateY.addEventListener('input', evt => {
-        overview.dataset.rotateY = evt.target.value;
-        presentation.goto(overview, 0);
-    });
-    rotateZ.addEventListener('input', evt => {
-        overview.dataset.rotateZ = evt.target.value;
-        presentation.goto(overview, 0);
-    });
-    </script>
+    <script src="/lib/enter-leave.js"></script>
+    <script src="presentation.js"></script>
 </body>
 </html>
