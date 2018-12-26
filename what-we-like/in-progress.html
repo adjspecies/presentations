@@ -50,25 +50,18 @@
                 data-y="1000"
                 data-z="0">
             <h2>Furries and sexuality</h2>
-            <div class="notes">NOTES NOTES NOTES</div>
-        </div>
-        <div id="its-complicated"
-                class="step once"
-                data-x="0"
-                data-y="-2500"
-                data-z="-5000"
-                data-rotate-z="90"
-                data-transition-duration="0">
-            <p>(It's complicated)</p>
-            <div class="notes">NOTES NOTES NOTES</div>
+            <p class="substep">(It's complicated)</p>
+            <div class="notes">
+                <p>Furries and sexuality</p>
+                <p>It's complicated</p>
+            </div>
         </div>
         <div id="intro-2"
                 class="step slide"
                 data-x="1000"
                 data-y="1000"
                 data-z="0"
-                data-rotate-z="0"
-                data-transition-duration="330">
+                data-rotate-z="0">
             <h3>How we perceive ourselves</h3>
             <div class="notes">NOTES NOTES NOTES</div>
         </div>
@@ -368,6 +361,8 @@
                     <li>The Furry Survey ran from 2008 until 2016</li>
                     <li>Lots of data on a lot of fronts, see Exploring the Fandom Through Data</li>
                     <li><em>next</em> 2015 and 2016 included data about sexuality and interests.</li>
+                    <li>Looking at mean of two years.</li>
+                    <li>Not all respondents answered every question</li>
                 </ul>
             </div>
         </div>
@@ -401,8 +396,8 @@
                 data-rotate-y="90"
                 data-func-enter="presentation.enter"
                 data-func-leave="presentation.leave"
-                data-vis-src="vis/furrysurvey/interests/vis.js"
-                data-vis-func-enter="presentation.interests.domsub"
+                data-vis-src="vis/furrysurvey/interests/domsub.js"
+                data-vis-func-enter="presentation.interests._enter"
                 data-vis-func-leave="presentation.interests._leave"
                 data-vis-id="interests__domsub">
             <div class="vis-container"></div>
@@ -498,12 +493,16 @@
                 data-rotate-y="90"
                 data-func-enter="presentation.enter"
                 data-func-leave="presentation.leave"
-                data-vis-src="vis/furrysurvey/interests/vis.js"
-                data-vis-func-enter="presentation.interests.kinks"
+                data-vis-src="vis/furrysurvey/interests/kinks.js"
+                data-vis-func-enter="presentation.interests._enter"
                 data-vis-func-leave="presentation.interests._leave"
                 data-vis-id="interests__kinks">
             <div class="vis-container"></div>
-            <div class="notes">NOTES NOTES NOTES</div>
+            <div class="notes">
+                <ul>
+                    <li>Kinks on the left ordered most to least popular by interest</li>
+                </ul>
+            </div>
         </div>
 
         <div id="sofurry-1"
