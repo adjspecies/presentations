@@ -1,5 +1,5 @@
 (function() {
-  const domsub = data => {
+  const domsubVis = data => {
     const width = 720;
     const chartWidth = 720 / 3;
     const height = 600;
@@ -120,7 +120,7 @@
 
   window.presentation = window.presentation || {};
   window.presentation.interests = {
-    _enter: () => d3.json('vis/furrysurvey/interests/data.json').then(domsub),
+    _enter: () => d3.json('vis/furrysurvey/interests/data.json').then(domsubVis),
     _leave: () => delete(window.presentation.interests)
   }
 })();
