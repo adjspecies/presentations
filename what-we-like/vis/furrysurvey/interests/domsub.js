@@ -1,12 +1,17 @@
 (function() {
-  const domsubVis = data => {
+  const domsubVis = _data => {
+    // Visualization size.
     const width = 720;
     const chartWidth = 720 / 3;
     const height = 600;
+
+    // Add SVG.
     const vis = d3.select('#interests__domsub')
       .append('svg')
       .attr('width', width)
       .attr('height', height + 100);
+
+    // Grouping elements for the three subsets.
     const sexual = vis.append('g')
       .classed('sexual', true);
     const romantic = vis.append('g')
@@ -16,12 +21,19 @@
       .classed('social', true)
       .attr('transform', `translate(${chartWidth * 2}, 0)`);
 
+    /**
+     * Build a bar graph for a given subset.
+     */
     const barGraph = (el, subset, key) => {
+      // Scale for current values.
       const scale = d3.scaleLinear()
         .domain([0, d3.max(Object.values(subset))])
         .range([0, height - 100]);
       const graphWidth = chartWidth * 0.85;
       const barWidth = graphWidth / 6;
+
+      // Add bars and labels one by one because it was easy when I first wrote
+      // this and now I'm too lazy to change it.
       el.append('rect')
         .attr('fill', '#088')
         .attr('width', barWidth * 0.9)
@@ -36,6 +48,7 @@
         .attr('text-anchor', 'end')
         .attr('dominant-baseline', 'middle')
         .style('font-size', '10pt');
+
       el.append('rect')
         .attr('fill', '#286')
         .attr('width', barWidth * 0.9)
@@ -50,6 +63,7 @@
         .attr('text-anchor', 'end')
         .attr('dominant-baseline', 'middle')
         .style('font-size', '10pt');
+
       el.append('rect')
         .attr('fill', '#484')
         .attr('width', barWidth * 0.9)
@@ -64,6 +78,7 @@
         .attr('text-anchor', 'end')
         .attr('dominant-baseline', 'middle')
         .style('font-size', '10pt');
+
       el.append('rect')
         .attr('fill', '#682')
         .attr('width', barWidth * 0.9)
@@ -78,6 +93,7 @@
         .attr('text-anchor', 'end')
         .attr('dominant-baseline', 'middle')
         .style('font-size', '10pt');
+
       el.append('rect')
         .attr('fill', '#860')
         .attr('width', barWidth * 0.9)
@@ -92,6 +108,7 @@
         .attr('text-anchor', 'end')
         .attr('dominant-baseline', 'middle')
         .style('font-size', '10pt');
+
       el.append('rect')
         .attr('fill', '#820')
         .attr('width', barWidth * 0.9)
@@ -106,6 +123,8 @@
         .attr('text-anchor', 'end')
         .attr('dominant-baseline', 'middle')
         .style('font-size', '10pt');
+
+      // Label for the subset.
       el.append('text')
         .text(key)
         .attr('y', height + 90)
@@ -113,9 +132,21 @@
         .attr('text-anchor', 'middle');
     };
 
-    barGraph(sexual, data.dom_sub['2016'].sexual, 'sexual');
-    barGraph(romantic, data.dom_sub['2016'].romantic, 'romantic');
-    barGraph(social, data.dom_sub['2016'].social, 'social');
+    // Get the subset.
+    _data = _data.dom_sub;
+
+    // Generate the mean of the two years.
+    const data = _data['2016'];
+    Object.keys(data).forEach(k => {
+      Object.keys(data[k]).forEach(o => {
+        data[k][o] = (data[k][o] + _data['2015'][k][o]) / 2;
+      });
+    });
+
+    // Build a bar chart for each subset.
+    barGraph(sexual, data.sexual, 'sexual');
+    barGraph(romantic, data.romantic, 'romantic');
+    barGraph(social, data.social, 'social');
   };
 
   window.presentation = window.presentation || {};
