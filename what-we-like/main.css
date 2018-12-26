@@ -143,6 +143,10 @@ a:focus {
     color: white;
     background-color: rgb(40, 73, 128);
 }
+.vis-slide svg {
+    display: block;
+    margin: 0 auto;
+}
 
 #overview { display: none }
 
