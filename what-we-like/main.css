@@ -143,9 +143,13 @@ a:focus {
     color: white;
     background-color: rgb(40, 73, 128);
 }
-.vis-slide svg {
+.vis-slide svg, .vis-slide img {
     display: block;
     margin: 0 auto;
+}
+
+.vis-slide .vis-label {
+    text-align: center;
 }
 
 #overview { display: none }
