@@ -56,15 +56,6 @@
                 <p>It's complicated</p>
             </div>
         </div>
-        <div id="intro-2"
-                class="step slide"
-                data-x="1000"
-                data-y="1000"
-                data-z="0"
-                data-rotate-z="0">
-            <h3>How we perceive ourselves</h3>
-            <div class="notes">NOTES NOTES NOTES</div>
-        </div>
         <div id="seximportance-self"
                 class="step slide vis-slide"
                 data-rel-x="1000"
@@ -75,13 +66,7 @@
                 data-vis-func-leave="presentation.seximportance._leave"
                 data-vis-id="seximportance__self">
             <div class="vis-container"></div>
-        </div>
-        <div id="intro-3"
-                class="step slide"
-                data-rel-x="1000"
-                data-z="0">
-            <h3>How we perceive other furries</h3>
-            <div class="notes">NOTES NOTES NOTES</div>
+            <p class="vis-label">"How important is sex in furry to yourself?"</p>
         </div>
         <div id="seximportance-others"
                 class="step slide vis-slide"
@@ -93,17 +78,11 @@
                 data-vis-func-leave="presentation.seximportance._leave"
                 data-vis-id="seximportance__others">
             <div class="vis-container"></div>
-        </div>
-        <div id="intro-4"
-                class="step slide"
-                data-rel-x="1000">
-            <h3>How we feel the public perceives us</h3>
-            <div class="notes">NOTES NOTES NOTES</div>
+            <p class="vis-label">"How important do you think sex in furry is to other furries?"</p>
         </div>
         <div id="seximportance-public"
                 class="step slide vis-slide"
                 data-rel-x="1000"
-                data-z="0"
                 data-func-enter="presentation.enter"
                 data-func-leave="presentation.leave"
                 data-vis-src="vis/furrysurvey/seximportance/vis.js"
@@ -111,6 +90,19 @@
                 data-vis-func-leave="presentation.seximportance._leave"
                 data-vis-id="seximportance__public">
             <div class="vis-container"></div>
+            <p class="vis-label">"How important do you think the public thinks sex is in furry?"</p>
+        </div>
+        <div id="intro-2"
+                class="step slide"
+                data-rel-x="1000">
+            <h3>Furries and Sexuality</h3>
+            <div class="notes">
+                <ul>
+                    <li>The thing is, we have as many hangups as anyone else</li>
+                    <li>We get defensive, even for how open-minded we try to be</li>
+                    <li>Not a bad thing, just part of being <s>human</s> a slice of society</li>
+                </ul>
+            </div>
         </div>
 
         <div id="data-1"
@@ -355,7 +347,7 @@
                 <li>2016: 3,551 respondents</li>
                 <li>Not all respondents responded to each question</li>
             </p>
-            <p class="substep">Anonymous and objective</p>
+            <p class="substep">Anonymous, with objective and subjective data</p>
             <div class="notes">
                 <ul>
                     <li>The Furry Survey ran from 2008 until 2016</li>
@@ -363,6 +355,9 @@
                     <li><em>next</em> 2015 and 2016 included data about sexuality and interests.</li>
                     <li>Looking at mean of two years.</li>
                     <li>Not all respondents answered every question</li>
+                    <li><em>next</em> Responses were anonymous, included both objective and subjective data</li>
+                    <li>Objective is already coded and not identifiable in and of itself</li>
+                    <li>Only looking at that for now</li>
                 </ul>
             </div>
         </div>
@@ -550,6 +545,31 @@
                 </ul>
             </div>
         </div>
+        <div id="sofurry-3"
+                class="step slide vis-slide y-scroll"
+                data-rel-x="-1000"
+                data-rotate-x="-90"
+                data-rotate-y="180"
+                data-func-enter="presentation.enter"
+                data-func-leave="presentation.leave"
+                data-vis-src="vis/sofurry/vis.js"
+                data-vis-func-enter="presentation.sofurry.vis"
+                data-vis-func-leave="presentation.sofurry._leave"
+                data-vis-id="sofurry__top25pertop25">
+            <div class="vis-container"></div>
+            <div class="notes">
+                <ul>
+                    <li>What we tag<ul>
+                        <li>Couplings</li>
+                        <li>Species</li>
+                        <li>Acts</li>
+                        <li>Story aspects</li>
+                        <li>Theme and genre</li>
+                    </ul></li>
+                    <li>What each tag means (subtags)</li>
+                </ul>
+            </div>
+        </div>
         <div id="sofurry-n"
                 class="step slide vis-slide"
                 data-rel-x="-1000"
@@ -560,9 +580,9 @@
                 data-vis-src="vis/sofurry/vis.js"
                 data-vis-func-enter="presentation.sofurry.stub_enter"
                 data-vis-func-leave="presentation.sofurry._leave"
-                data-vis-id="sofurry__stub">
+                data-vis-id="sofurry__top25pertop25">
             <div class="vis-container"></div>
-            <div class="notes">NOTES NOTES NOTES</div>
+            <div class="notes">NOTES NOTES NOTES talk about coupling/species/acts/story aspects (plot driven, character development)/theme and genre</div>
         </div>
 
 
@@ -583,6 +603,30 @@
                 data-rotate-x="-90"
                 data-rotate-y="270">
             <h3>e621</h3>
+            <p>API exposing information about entities on the site</p>
+            <p class="substep">In particular, we're interested in:<ul class="substep">
+                <li>Posts</li>
+                <li>Tags</li>
+                <li>Sources</li>
+                <li>Artists</li>
+            </ul></p>
+        </div>
+        <div id="e621-2"
+                class="step slide"
+                data-rel-y="1000"
+                data-rotate-x="-90"
+                data-rotate-y="270">
+            <h3>e621</h3>
+            <p>Tagging on e621</p>
+            <div class="notes">
+                <ul>
+                    <li>How is tagging on e621 different from on SoFurry?</li>
+                    <li>There are rules and guidelines for tagging</li>
+                    <li>When restrictions are imposed, both makes art easier to find, and changes dynamic of what tags are used</li>
+                    <li>Tag what you see, not what you want people to find</li>
+                    <li>Also: tagging other people's work</li>
+                </ul>
+            </div>
         </div>
         <div id="e621-3"
                 class="step slide vis-slide e621-slide"
