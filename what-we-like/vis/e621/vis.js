@@ -1342,26 +1342,145 @@
    * explore621 visualizations - from https://github.com/adjspecies/explore621/blob/master/e621/static/js/vis.js
    */
 
-  /**
-   * Visualizations for the presentation.
-   */
-  const dashboard = data => {
-    const vis = d3.select('#e621__dashboard')
+  const getEl = id => {
+    return d3.select(`#e621__${id}`)
       .append('svg')
       .attr('width', 800)
       .attr('height', 600)
       .classed('vis', true);
-
+  }
+  /**
+   * Visualizations for the presentation.
+   */
+  const intro_dashboard = data => {
+    const vis = getEl('intro__dashboard');
     module.setStats(vis, data.result.last_run.result, {});
+  };
+  const intro_siteUsage_countOverTime = data => {
+    const vis = getEl('intro__siteusage__count');
+    module.simpleLine(vis, data.result.last_run.result, {});
+  };
+  const intro_siteUsage_uploadsPerDay = data => {
+    const vis = getEl('intro__siteusage__uploads');
+    module.simpleLine(vis, data.result.last_run.result, {});
+  };
+
+  const basics_sexes = data => {
+    const vis = getEl('basics__sexes');
+    module.tagsOverTime(vis, data.result.last_run.result, {});
+  };
+  const basics_combinations = data => {
+    const vis = getEl('basics__combinations');
+    module.tagsOverTime(vis, data.result.last_run.result, {});
+  };
+  const basics_acts = data => {
+    const vis = getEl('basics__acts');
+    module.tagsOverTime(vis, data.result.last_run.result, {});
+  };
+
+  const media_mlp = data => {
+    const vis = getEl('media__mlp');
+    module.relativePopularity(vis, data.result.last_run.result, {});
+  };
+  const media_zootopia_popularity = data => {
+    const vis = getEl('media__zootopia__popularity');
+    module.relativePopularity(vis, data.result.last_run.result, {});
+  };
+  const media_zootopia_foxesAndBunnies = data => {
+    const vis = getEl('media__zootopia__foxesbunnies');
+    module.tagsOverTime(vis, data.result.last_run.result, {});
+  }
+
+  const artists_neospecies = data => {
+    const vis = getEl('artists__neospecies');
+    module.tagsOverTime(vis, data.result.last_run.result, {});
+  };
+
+  const memes_drawYourselfIn = data => {
+    const vis = getEl('basics__sexes');
+    module.tagsOverTime(vis, data.result.last_run.result, {});
+  };
+  const memes_bowsetteBowser = data => {
+    const vis = getEl('basics__sexes');
+    module.tagsOverTime(vis, data.result.last_run.result, {});
   };
 
   window.presentation = window.presentation || {};
   window.presentation.e621 = {
-    dashboard: () => window.presentation
-      .fetchWithDefault(
-        'https://explore621.net/api/report/23/',
-        'vis/e621/fallback/dashboard.json',
-        dashboard),
+    intro: {
+      dashboard: () => window.presentation
+        .fetchWithDefault(
+          'https://explore621.net/api/report/23/',
+          'vis/e621/fallback/intro/dashboard.json',
+          intro_dashboard),
+      siteUsage: {
+        countOverTime: () => window.presentation
+          .fetchWithDefault(
+            'https://explore621.net/api/report/6/',
+            'vis/e621/fallback/intro/siteUsage/countOverTime.json',
+            intro_siteUsage_countOverTime),
+        uploadsPerDay: () => window.presentation
+          .fetchWithDefault(
+            'https://explore621.net/api/report/3/',
+            'vis/e621/fallback/intro/siteUsage/uploadsPerDay.json',
+            intro_siteUsage_uploadsPerDay)
+      }
+    },
+    basics: {
+      sexes: () => window.presentation
+        .fetchWithDefault(
+          'https://explore621.net/api/report/26/',
+          'vis/e621/fallback/basics/sexes.json',
+          basics_sexes),
+      combinations: () => window.presentation
+        .fetchWithDefault(
+          'https://explore621.net/api/report/25/',
+          'vis/e621/fallback/basics/combinations.json',
+          basics_combinations),
+      acts: () => window.presentation
+        .fetchWithDefault(
+          'https://explore621.net/api/report/24/',
+          'vis/e621/fallback/basics/acts.json',
+          basics_acts)
+    },
+    media: {
+      mlp: () => window.presentation
+        .fetchWithDefault(
+          'https://explore621.net/api/report/28/',
+          'vis/e621/fallback/media/mlp.json',
+          media_mlp),
+      zootopia: {
+        popularity: () => window.presentation
+          .fetchWithDefault(
+            'https://explore621.net/api/report/2/',
+            'vis/e621/fallback/media/zootopia/popularity.json',
+            media_zootopia_popularity),
+        foxesAndBunnies: () => window.presentation
+          .fetchWithDefault(
+            'https://explore621.net/api/report/20/',
+            'vis/e621/fallback/media/zootopia/foxesAndBunnies.json',
+            media_zootopia_foxesAndBunnies)
+      }
+    },
+    artists: {
+      neospecies: () => window.presentation
+        .fetchWithDefault(
+          'https://explore621.net/api/report/33/',
+          'vis/e621/fallback/artists/neospecies.json',
+          artists_neospecies)
+    },
+    memes: {
+      drawYourselfIn: () => window.presentation
+        .fetchWithDefault(
+          'https://explore621.net/api/report/30/',
+          'vis/e621/fallback/memes/drawYourselfIn.json',
+          memes_drawYourselfIn),
+      bowsetteBowser: () => window.presentation
+        .fetchWithDefault(
+          'https://explore621.net/api/report/22/',
+          'vis/e621/fallback/memes/bowsetteBowser.json',
+          memes_bowsetteBowser)
+    }
     _leave: () => delete(window.presentation.e621)
   };
 })();
