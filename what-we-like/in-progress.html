@@ -602,7 +602,9 @@
         </div>
         <div id="e621-intro-1"
                 class="step slide vis-slide e621-slide"
+                data-rel-x="0"
                 data-rel-y="1000"
+                data-rel-z="0"
                 data-rotate-x="-90"
                 data-rotate-y="270"
                 data-func-enter="presentation.enter"
@@ -640,9 +642,7 @@
         </div>
         <div id="e621-2"
                 class="step slide"
-                data-rel-x="0"
                 data-rel-y="1000"
-                data-rel-z="0"
                 data-rotate-x="-90"
                 data-rotate-y="270">
             <h3>e621</h3>
@@ -812,6 +812,7 @@
                 data-rotate-x="-90"
                 data-rotate-y="270">
             <div class="vis-container">
+                <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/1671_RC04/embed_loader.js"></script>
                 <script type="text/javascript">trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"my little pony","geo":"US","time":"2007-02-10 2018-12-17"}],"category":0,"property":""}, {"exploreQuery":"date=2007-02-10%202018-12-17&amp;geo=US&amp;q=my%20little%20pony","guestPath":"https://trends.google.com:443/trends/embed/"});</script>
             </div>
             <div class="notes">
@@ -837,6 +838,8 @@
                 <ul>
                     <li>zootopia</li>
                     <li>Can see that it is quite popular, often by several standard deviations.</li>
+                    <li>First spike is the first teaser</li>
+                    <li>Subsequent spikes are trailers and then debut</li>
                     <li>However, popularity often infects other tags</li>
                 </ul>
             </div>
@@ -859,6 +862,61 @@
                 </ul>
             </div>
         </div>
+        <div id="e621-6"
+                class="step slide"
+                data-rel-y="1000"
+                data-rotate-x="-90"
+                data-rotate-y="270">
+            <h3>e621</h3>
+            <p>Memes</p>
+            <div class="notes">
+                <ul>
+                    <li>Of course, not everything has to come on high as canon</li>
+                    <li>The internet, like furry, is without canon, and happily creates its own from moment to moment</li>
+                    <li>Memes are an example of this. Something people agree on as a truth, even if only for a short time.</li>
+                </ul>
+            </div>
+        </div>
+        <div id="e621-memes-1"
+                class="step slide vis-slide e621-slide"
+                data-rel-y="1000"
+                data-rotate-x="-90"
+                data-rotate-y="270"
+                data-func-enter="presentation.enter"
+                data-func-leave="presentation.leave"
+                data-vis-src="vis/e621/vis.js"
+                data-vis-func-enter="presentation.e621.memes.drawYourselfIn"
+                data-vis-func-leave="presentation.e621._leave"
+                data-vis-id="e621__memes__drawYourselfIn">
+            <div class="vis-container"></div>
+            <div class="notes">
+                <ul>
+                    <li>One meme that crops up in various formats time and again is the "Draw yourself in..." meme.</li>
+                    <li>Takes the form of a - usually ridiculous - piece of clothing with the suggestion to draw yourself (or have someone draw you) wearing it</li>
+                    <li>Here are a few examples</li>
+                </ul>
+            </div>
+        </div>
+        <div id="e621-memes-2"
+                class="step slide vis-slide e621-slide"
+                data-rel-y="1000"
+                data-rotate-x="-90"
+                data-rotate-y="270"
+                data-func-enter="presentation.enter"
+                data-func-leave="presentation.leave"
+                data-vis-src="vis/e621/vis.js"
+                data-vis-func-enter="presentation.e621.memes.bowsetteBowser"
+                data-vis-func-leave="presentation.e621._leave"
+                data-vis-id="e621__memes__bowsetteBowser">
+            <div class="vis-container"></div>
+            <div class="notes">
+                <ul>
+                    <li>of course, it can get a bit out of hand</li>
+                    <li>this one transcended furry, to an extent</li>
+                    <li>note, though, how much it influenced bowser as a tag</li>
+                </ul>
+            </div>
+        </div>
         <div id="e621-n"
                 class="step slide"
                 data-rel-y="1000"
@@ -868,6 +926,7 @@
             <p class="substep">Find out more about e621 data, along with these charts and more on <a href="https://explore621.net" target="_blank">explore621.net</a></p>
             <div class="notes">
                 <ul>
+                    <li>That's all I have for the e621 side of the presentation</li>
                     <li>Find more on explore621.net</li>
                 </ul>
             </div>
@@ -880,14 +939,16 @@
                 data-rel-z="500"
                 data-rotate-x="180">
             <h2>Conclusion</h2>
-        </div>
-        <div id="conclusion-n"
-                class="step slide"
-                data-rel-y="0"
-                data-rel-x="1000"
-                data-rel-z="0"
-                data-rotate-x="180">
-            <h2>Conclusion</h2>
+            <div class="notes">
+                <ul>
+                    <li>So, we've seen a bit of what it is that we, as a loose amalgam of a subculture, like when it comes to sex, interests, and kinks.</li>
+                    <li>We went through the gamut of self-identification, tagging of our own art, and tagging of others' art, three different levels of specificity</li>
+                    <li>We saw some basics about what we like, as well as some popular interests</li>
+                    <li>We saw some interesting little tidbits from the e621 data</li>
+                    <li>Now, we get to see how we, as individuals, fit into all this. What do we like? How do we compare with what we see? Are we in line with it, or do we go against the grain?</li>
+                    <li>That's all I have for my presentation, but I do have quite a bit of data on hand and, assuming I have network access, I have the entire e621 data set available. Feel free to ask me anything.</li>
+                </ul>
+            </div>
         </div>
 
         <div id="overview"

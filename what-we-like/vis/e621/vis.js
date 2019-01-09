@@ -1349,6 +1349,7 @@
       .attr('height', 600)
       .classed('vis', true);
   }
+
   /**
    * Visualizations for the presentation.
    */
@@ -1358,51 +1359,51 @@
   };
   const intro_siteUsage_countOverTime = data => {
     const vis = getEl('intro__siteusage__count');
-    module.simpleLine(vis, data.result.last_run.result, {});
+    module.simpleLine(vis, data.result.last_run.result, {}, d => d);
   };
   const intro_siteUsage_uploadsPerDay = data => {
     const vis = getEl('intro__siteusage__uploads');
-    module.simpleLine(vis, data.result.last_run.result, {});
+    module.simpleLine(vis, data.result.last_run.result, {}, d => d);
   };
 
   const basics_sexes = data => {
     const vis = getEl('basics__sexes');
-    module.tagsOverTime(vis, data.result.last_run.result, {});
+    module.tagsOverTime(vis, data.result.last_run.result, {}, d => `${d}-01`);
   };
   const basics_combinations = data => {
     const vis = getEl('basics__combinations');
-    module.tagsOverTime(vis, data.result.last_run.result, {});
+    module.tagsOverTime(vis, data.result.last_run.result, {}, d => `${d}-01`);
   };
   const basics_acts = data => {
     const vis = getEl('basics__acts');
-    module.tagsOverTime(vis, data.result.last_run.result, {});
+    module.tagsOverTime(vis, data.result.last_run.result, {}, d => `${d}-01`);
   };
 
   const media_mlp = data => {
     const vis = getEl('media__mlp');
-    module.relativePopularity(vis, data.result.last_run.result, {});
+    module.relativePopularity(vis, data.result.last_run.result, {}, d => `${d}-01`);
   };
   const media_zootopia_popularity = data => {
     const vis = getEl('media__zootopia__popularity');
-    module.relativePopularity(vis, data.result.last_run.result, {});
+    module.relativePopularity(vis, data.result.last_run.result, {}, d => `${d}-01`);
   };
   const media_zootopia_foxesAndBunnies = data => {
     const vis = getEl('media__zootopia__foxesbunnies');
-    module.tagsOverTime(vis, data.result.last_run.result, {});
+    module.tagsOverTime(vis, data.result.last_run.result, {}, d => `${d}-01`);
   }
 
   const artists_neospecies = data => {
     const vis = getEl('artists__neospecies');
-    module.tagsOverTime(vis, data.result.last_run.result, {});
+    module.tagsOverTime(vis, data.result.last_run.result, {}, d => `${d}-01`);
   };
 
   const memes_drawYourselfIn = data => {
-    const vis = getEl('basics__sexes');
-    module.tagsOverTime(vis, data.result.last_run.result, {});
+    const vis = getEl('memes__drawYourselfIn');
+    module.tagsOverTime(vis, data.result.last_run.result, {}, d => `${d}-01`);
   };
   const memes_bowsetteBowser = data => {
-    const vis = getEl('basics__sexes');
-    module.tagsOverTime(vis, data.result.last_run.result, {});
+    const vis = getEl('memes__bowsetteBowser');
+    module.tagsOverTime(vis, data.result.last_run.result, {}, d => `${d}-01`);
   };
 
   window.presentation = window.presentation || {};
@@ -1480,7 +1481,7 @@
           'https://explore621.net/api/report/22/',
           'vis/e621/fallback/memes/bowsetteBowser.json',
           memes_bowsetteBowser)
-    }
+    },
     _leave: () => delete(window.presentation.e621)
   };
 })();
