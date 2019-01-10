@@ -315,11 +315,16 @@ body.impress-mouse-timeout {
  */
 .e621-slide .vis * {
     stroke: #eef;
+    font-size: 12pt;
 }
 
 .e621-slide .vis text, .e621-slide .vis tspan {
     stroke: none;
     fill: #eef;
+}
+
+.e621-slide .vis .axis * {
+    font-size: 8pt;
 }
 
 .e621-slide .vis .button-on rect {
