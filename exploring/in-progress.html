@@ -3,6 +3,7 @@
 <head>
     <title>Exploring the Fandom Through Data</title>
     <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="stylesheet" type="text/css" href="lib/nv.d3.css" />
 </head>
 <body class="impress-not-supported">
     <div class="fallback-message">
@@ -185,6 +186,7 @@
                 data-rel-x="1000"
                 data-rel-z="1000">
             <h3>Furry status</h3>
+            <div id="furry_status" class="vis-el"><svg></svg></div>
             <div class="notes">
                 NOTES
             </div>
@@ -193,6 +195,7 @@
                 class="step slide vis-slide"
                 data-rel-z="0">
             <h3>Age distribution</h3>
+            <div id="age" class="vis-el"><svg></svg></div>
             <div class="notes">
                 NOTES
             </div>
@@ -200,6 +203,7 @@
         <div id="what-have-we-learned-5"
                 class="step slide vis-slide">
             <h3>Racial distribution</h3>
+            <div id="race" class="vis-el"><svg></svg></div>
             <div class="notes">
                 NOTES
             </div>
@@ -213,11 +217,11 @@
             </div>
         </div>
 
-        <div id="gender-general"
+        <div id="gender-identity"
                 class="step slide vis-slide"
                 data-rel-x="0"
                 data-rel-y="1000">
-            <div>Gendergraph</div>
+            <div id="gender_identity" class="vis-el"><svg></svg></div>
         </div>
         <div id="gender-diamond-1"
                 class="step slide vis-slide"
@@ -247,13 +251,13 @@
         </div>
         <div id="gender-alignment"
                 class="step slide vis-slide">
-            <div>Gender alignment</div>
+            <div id="gender_alignment" class="vis-el"><svg></svg></div>
         </div>
 
         <div id="what-have-we-learned-7"
                 class="step slide"
                 data-rel-y="-1000">
-            <h3>relationships</h3>
+            <h3>Relationships</h3>
             <div class="notes">
                 NOTES
             </div>
@@ -263,6 +267,7 @@
                 data-rel-x="0"
                 data-rel-y="1000">
             <h3>Orientation</h3>
+            <div id="sexual_orientation" class="vis-el"><svg></svg></div>
             <div class="notes">
                 NOTES
             </div>
@@ -272,6 +277,7 @@
                 data-rel-x="1000"
                 data-rel-y="0">
             <h3>Relationship status</h3>
+            <div id="relationship" class="vis-el"><svg></svg></div>
             <div class="notes">
                 NOTES
             </div>
@@ -279,6 +285,10 @@
         <div id="relationships-3"
                 class="step slide vis-slide">
             <h3>Relationship status open/closed</h3>
+            <h4>Sexual</h4>
+            <div id="polyamory__sexuality" class="vis-el"><svg></svg></div>
+            <h4>Romantic</h4>
+            <div id="polyamory__romantic" class="vis-el"><svg></svg></div>
             <div class="notes">
                 NOTES
             </div>
@@ -286,6 +296,7 @@
         <div id="relationships-4"
                 class="step slide vis-slide">
             <h3>Relationship status partner is furry</h3>
+            <div id="partner_is_furry" class="vis-el"><svg></svg></div>
             <div class="notes">
                 NOTES
             </div>
@@ -304,6 +315,7 @@
                 data-rel-x="0"
                 data-rel-y="1000">
             <h3>Social</h3>
+            <div id="political_views__social" class="vis-el"><svg></svg></div>
             <div class="notes">
                 NOTES
             </div>
@@ -313,6 +325,7 @@
                 data-rel-x="1000"
                 data-rel-y="0">
             <h3>Economics</h3>
+            <div id="political_views__economic" class="vis-el"><svg></svg></div>
             <div class="notes">
                 NOTES
             </div>
@@ -330,7 +343,8 @@
                 class="step slide vis-slide"
                 data-rel-x="0"
                 data-rel-y="1000">
-            <h3>Personal</h3>
+            <h4>The importance of sex - Personal</h4>
+            <div id="sex_importance__self" class="vis-el sex_importance"><svg></svg></div>
             <div class="notes">
                 NOTES
             </div>
@@ -339,7 +353,8 @@
                 class="step slide vis-slide"
                 data-rel-x="1000"
                 data-rel-y="0">
-            <h3>Others</h3>
+            <h4>The importance of sex - Others</h4>
+            <div id="sex_importance__others" class="vis-el sex_importance"><svg></svg></div>
             <div class="notes">
                 NOTES
             </div>
@@ -347,7 +362,8 @@
         <div id="seximportance-public"
                 class="step slide vis-slide"
                 data-rel-y="0">
-            <h3>From the public's perspective</h3>
+            <h4>The importance of sex - From the public's perspective</h4>
+            <div id="sex_importance__public" class="vis-el sex_importance"><svg></svg></div>
             <div class="notes">
                 NOTES
             </div>
@@ -371,14 +387,14 @@
         </div>
         <div id="doxa-3"
                 class="step slide vis-slide">
-            <img src="images/givingperattendee.png" />
+            <img src="images/givingperattendee.png" style="max-width: 100%; max-height: 100%" />
             <div class="notes">
                 NOTES
             </div>
         </div>
         <div id="doxa-4"
                 class="step slide vis-slide">
-            <img src="images/allgiving.png" />
+            <img src="images/allgiving.png" style="max-width: 100%; max-height: 100%" />
             <div class="notes">
                 NOTES
             </div>
@@ -395,21 +411,21 @@
         <div id="where-from-here-2"
                 class="step slide vis-slide"
                 data-rel-y="0">
-            <img src="images/microsurvey1.png" />
+            <img src="images/microsurvey1.png" style="max-width: 100%; max-height: 100%" />
             <div class="notes">
                 NOTES
             </div>
         </div>
         <div id="where-from-here-3"
                 class="step slide vis-slide">
-            <img src="images/microsurvey2.png" />
+            <img src="images/microsurvey2.png" style="max-width: 100%; max-height: 100%" />
             <div class="notes">
                 NOTES
             </div>
         </div>
         <div id="where-from-here-4"
                 class="step slide vis-slide">
-            <img src="images/explorer.png" />
+            <img src="images/explorer.png" style="max-width: 100%; max-height: 100%" />
             <div class="notes">
                 NOTES
             </div>
@@ -422,11 +438,6 @@
             data-z="20000">
         </div>
     </div>
-    <div id="rotate-controls">
-        <input class="rotateX" type="range" min="-30" max="30" value="0" step="1" />
-        <input class="rotateY" type="range" min="-30" max="30" value="0" step="1" />
-        <input class="rotateZ" type="range" min="-30" max="30" value="0" step="1" />
-    </div>
     <div id="impress-toolbar"></div>
     <div class="impress-progressbar"><div></div></div>
     <div class="impress-progress"></div>
@@ -434,8 +445,11 @@
         <p>Use a spacebar or arrow keys to navigate. <br/>
            Press 'P' to launch speaker console.</p>
     </div>
+    <script src="lib/underscore-min.js"></script>
+    <script src="lib/d3.v3.min.js"></script>
+    <script src="lib/nv.d3.js"></script>
+    <script src="furrysurvey.js"></script>
     <script src="/lib/impress/impress.js"></script>
-    <script src="/lib/enter-leave.js"></script>
     <script src="presentation.js"></script>
 </body>
 </html>
