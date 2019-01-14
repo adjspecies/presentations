@@ -85,6 +85,10 @@ a:focus {
 .impress-enabled .substep, .impress-enabled .step.past .substep { opacity: 0; transition: opacity .5s; }
 .impress-enabled .substep.substep-visible { opacity: 1; }
 
+.impress-enabled .step.overflow { overflow: visible; opacity: 1; }
+.impress-enabled .step.overflow img { opacity: 1; }
+.impress-enabled .step.active.overflow-overlay { opacity: 0; }
+
 .slide {
     display: block;
 
@@ -138,10 +142,6 @@ a:focus {
     height: 100vh;
     width: 100vw;
     transform: color 330ms, background-color 330ms, height 330ms, width: 330ms;
-}
-.vis-slide.e621-slide.active {
-    color: white;
-    background-color: rgb(40, 73, 128);
 }
 .vis-slide svg, .vis-slide img {
     display: block;
@@ -301,103 +301,3 @@ body.impress-mouse-timeout {
 .impress-enabled #impress                 { pointer-events: auto }
 .impress-enabled #impress-toolbar         { pointer-events: auto }
 .impress-enabled #impress-console-button  { pointer-events: auto }
-
-
-.e621-slide .vis-container {
-   padding-top: 1em;
-   background-color: rgba(0, 0, 0, 0.3);
-}
-
-/**
- * explore621 css - from https://github.com/adjspecies/explore621/blob/master/e621/static/css/main.css
- *
- * vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
- */
-.e621-slide .vis * {
-    stroke: #eef;
-    font-size: 12pt;
-}
-
-.e621-slide .vis text, .e621-slide .vis tspan {
-    stroke: none;
-    fill: #eef;
-}
-
-.e621-slide .vis .axis * {
-    font-size: 8pt;
-}
-
-.e621-slide .vis .button-on rect {
-    stroke: #eef;
-    stroke-width: 1px;
-    fill: #ccd;
-    padding: 2px;
-    cursor: pointer;
-}
-
-.e621-slide .vis .button-on text {
-    fill: #223;
-    cursor: pointer;
-}
-
-.e621-slide .vis .button-off rect {
-    stroke: #aab;
-    stroke-width: 1px;
-    fill: rgba(250, 250, 256, 0.1);
-    padding: 2px;
-    cursor: pointer;
-}
-
-.e621-slide .vis .button-off text {
-    cursor: pointer;
-}
-
-.e621-slide .vis .data {
-    stroke-width: 2px;
-    stroke: #aad;
-}
-
-.e621-slide .vis .data-text {
-    stroke: none;
-    fill: #aad;
-}
-
-.e621-slide .vis .floating-legend .legend {
-    display: none;
-}
-
-.e621-slide .vis .floating-legend.visible .legend {
-    display: block;
-}
-
-.e621-slide .vis .floating-legend.visible .legend-item rect {
-    fill: rgb(0, 33, 88);
-    stroke: rgb(0, 23 68);
-}
-
-.e621-slide .vis .floating-legend .overlay rect {
-    stroke-width: 0px;
-    fill: rgba(0, 0, 0, 0.0);
-}
-
-.e621-slide .vis .static-legend text {
-    font-size: 10pt;
-}
-
-.e621-slide .subvis text {
-    font-size: 11pt;
-}
-
-.e621-slide .subvis .header {
-    font-size: 14pt;
-    font-weight: bold;
-}
-
-.e621-slide .subvis .datum-text {
-    font-size: 8pt;
-}
- /**
-  * ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  *
-  * explore621 css - from https://github.com/adjspecies/explore621/blob/master/e621/static/css/main.css
-  */
