@@ -152,6 +152,21 @@ a:focus {
     text-align: center;
 }
 
+.vis-el {
+    width: 800px;
+    height: 600px;
+    display: block;
+    margin: 0 auto;
+}
+
+.nvtooltip {
+    color: black;
+}
+
+.sex_importance .nv-series-7 path {
+    stroke-width: 5!important;
+}
+
 #overview { display: none }
 
 .impress-on-overview #rotate-controls {
@@ -297,7 +312,7 @@ body.impress-mouse-timeout {
 
     So use it wisely ... or don't use at all.
 ***/
-.impress-enabled                          { pointer-events: none }
+/*.impress-enabled                          { pointer-events: none }
 .impress-enabled #impress                 { pointer-events: auto }
 .impress-enabled #impress-toolbar         { pointer-events: auto }
-.impress-enabled #impress-console-button  { pointer-events: auto }
+.impress-enabled #impress-console-button  { pointer-events: auto }*/
