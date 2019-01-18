@@ -90,6 +90,8 @@ var furrySurvey = function(d3, nv, _data) {
     nv.addGraph(function() {
       var vis = nv.models.stackedAreaChart()
         .useInteractiveGuideline(true)
+        .style('expand')
+        .showControls(false)
         .x(function(d) { return d[1]; })
         .y(function(d) { return d[0]; });
       vis.xAxis.tickFormat(function(d) { return d.toString(); });
@@ -160,7 +162,7 @@ var furrySurvey = function(d3, nv, _data) {
     _data.n,
     utils.objectToArray(_data.demographics.gender_alignment),
     'gender_alignment')
-    
+
   chartStacked(
     _data.n,
     utils.objectToArray(utils.objectToArray(_data.demographics.biological_sex)),
