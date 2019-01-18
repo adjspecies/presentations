@@ -181,32 +181,6 @@ a:focus {
     transition: background-color 330ms;
 }
 
-/*** Rotate controls ***/
-
-#rotate-controls {
-    display: none;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    width: 200px;
-    height: 220px;
-    z-index: 10000;
-    pointer-events: auto;
-    opacity: .5;
-}
-
-#rotate-controls .rotateZ, #rotate-controls .rotateX {
-    width: 200px;
-    height: 20px;
-}
-
-#rotate-controls .rotateY {
-    width: 200px;
-    height: 200px;
-    transform-origin: 100px 100px;
-    transform: rotate(-90deg)
-}
-
 /*** Impress toolbar ***/
 .impress-enabled div#impress-toolbar {
     position: fixed;
