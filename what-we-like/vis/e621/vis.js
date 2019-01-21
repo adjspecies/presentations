@@ -1387,8 +1387,16 @@
     const vis = getEl('media__zootopia__popularity');
     module.relativePopularity(vis, data.result.last_run.result, {}, d => `${d}-01`);
   };
+  const media_zootopia_justFoxes = data => {
+    const vis = getEl('media__zootopia__justfoxes');
+    module.tagsOverTime(vis, data.result.last_run.result, {}, d => `${d}-01`);
+  }
   const media_zootopia_foxesAndBunnies = data => {
     const vis = getEl('media__zootopia__foxesbunnies');
+    module.tagsOverTime(vis, data.result.last_run.result, {}, d => `${d}-01`);
+  }
+  const media_zootopia_disney = data => {
+    const vis = getEl('media__zootopia__disney');
     module.tagsOverTime(vis, data.result.last_run.result, {}, d => `${d}-01`);
   }
 
@@ -1456,11 +1464,21 @@
             'https://explore621.net/api/report/2/',
             'vis/e621/fallback/media/zootopia/popularity.json',
             media_zootopia_popularity),
+        justFoxes: () => window.presentation
+          .fetchWithDefault(
+            'https://explore621.net/api/report/38/',
+            'vis/e621/fallback/media/zootopia/justFoxes.json',
+            media_zootopia_justFoxes),
         foxesAndBunnies: () => window.presentation
           .fetchWithDefault(
             'https://explore621.net/api/report/20/',
             'vis/e621/fallback/media/zootopia/foxesAndBunnies.json',
-            media_zootopia_foxesAndBunnies)
+            media_zootopia_foxesAndBunnies),
+        disney: () => window.presentation
+          .fetchWithDefault(
+            'https://explore621.net/api/report/37/',
+            'vis/e621/fallback/media/zootopia/disney.json',
+            media_zootopia_disney)
       }
     },
     artists: {
