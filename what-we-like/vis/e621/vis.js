@@ -1399,6 +1399,14 @@
     const vis = getEl('media__zootopia__disney');
     module.tagsOverTime(vis, data.result.last_run.result, {}, d => `${d}-01`);
   }
+  const media_beastars_general = data => {
+    const vis = getEl('media__beastars__general');
+    module.relativePopularity(vis, data.result.last_run.result, {}, d => `${d}-01`);
+  };
+  const media_beastars_characters = data => {
+    const vis = getEl('media__beastars__characters');
+    module.tagsOverTime(vis, data.result.last_run.result, {}, d => `${d}-01`);
+  }
 
   const artists_neospecies = data => {
     const vis = getEl('artists__neospecies');
@@ -1479,6 +1487,18 @@
             'https://explore621.net/api/report/37/',
             'vis/e621/fallback/media/zootopia/disney.json',
             media_zootopia_disney)
+      },
+      beastars: {
+        general: () => window.presentation
+          .fetchWithDefault(
+            'https://explore621.net/api/report/44/',
+            'vis/e621/fallback/media/beastars/general.json',
+            media_beastars_general),
+        characters: () => window.presentation
+          .fetchWithDefault(
+            'https://explore621.net/api/report/45/',
+            'vis/e621/fallback/media/beastars/characters.json',
+            media_beastars_characters)
       }
     },
     artists: {
