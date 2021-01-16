@@ -1379,6 +1379,10 @@
     module.tagsOverTime(vis, data.result.last_run.result, {}, d => `${d}-01`);
   };
 
+  const media_overview = data => {
+    const vis = getEl('media__overview');
+    module.tagsOverTime(vis, data.result.last_run.result, {}, d => `${d}-01`);
+  };
   const media_mlp = data => {
     const vis = getEl('media__mlp');
     module.relativePopularity(vis, data.result.last_run.result, {}, d => `${d}-01`);
@@ -1461,6 +1465,11 @@
           basics_acts)
     },
     media: {
+      overview: () => window.presentation
+        .fetchWithDefault(
+          'https://explore621.net/api/report/52/',
+          'vis/e621/fallback/media/overview.json',
+          media_overview),
       mlp: () => window.presentation
         .fetchWithDefault(
           'https://explore621.net/api/report/28/',
